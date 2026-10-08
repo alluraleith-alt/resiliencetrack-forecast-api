@@ -1,0 +1,20 @@
+{
+  "features": [
+    "location_enc",
+    "disaster_type_enc",
+    "disaster_severity",
+    "year",
+    "month",
+    "is_wet_season",
+    "families_affected",
+    "individuals_affected",
+    "indiv_per_family",
+    "loc_hist_ffp_per_family"
+  ],
+  "targets": [
+    "ffp_pack",
+    "hygiene_kits",
+    "sleeping_kits"
+  ],
+  "version": "v1"
+}

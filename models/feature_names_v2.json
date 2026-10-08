@@ -1,0 +1,26 @@
+{
+  "features": [
+    "location_enc",
+    "disaster_type_enc",
+    "disaster_severity",
+    "year",
+    "month",
+    "is_wet_season",
+    "families_affected",
+    "individuals_affected",
+    "indiv_per_family",
+    "loc_hist_ffp_per_family"
+  ],
+  "targets": [
+    "ffp_pack",
+    "heb",
+    "rtef",
+    "shelter_kits",
+    "hygiene_kits",
+    "sleeping_kits",
+    "kitchen_kits",
+    "family_kits",
+    "portable_water"
+  ],
+  "version": "v2"
+}

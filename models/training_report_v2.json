@@ -1,0 +1,227 @@
+{
+  "dataset": {
+    "total_rows": 80,
+    "train_rows": 66,
+    "test_rows": 14,
+    "date_range": {
+      "earliest": "2011-04-12",
+      "latest": "2026-02-04"
+    },
+    "train_events": 19,
+    "test_events": 4
+  },
+  "rf_params": {
+    "n_estimators": 200,
+    "max_depth": 6,
+    "min_samples_leaf": 2,
+    "min_samples_split": 4,
+    "max_features": "sqrt",
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "features": [
+    "location_enc",
+    "disaster_type_enc",
+    "disaster_severity",
+    "year",
+    "month",
+    "is_wet_season",
+    "families_affected",
+    "individuals_affected",
+    "indiv_per_family",
+    "loc_hist_ffp_per_family"
+  ],
+  "targets": [
+    "ffp_pack",
+    "heb",
+    "rtef",
+    "shelter_kits",
+    "hygiene_kits",
+    "sleeping_kits",
+    "kitchen_kits",
+    "family_kits",
+    "portable_water"
+  ],
+  "models": {
+    "ffp_pack": {
+      "train": {},
+      "test": {
+        "mae": 185.51,
+        "rmse": 240.54,
+        "r2": 0.886
+      },
+      "feature_importances": {
+        "location_enc": 0.0138,
+        "disaster_type_enc": 0.0105,
+        "disaster_severity": 0.0533,
+        "year": 0.0565,
+        "month": 0.1157,
+        "is_wet_season": 0.0161,
+        "families_affected": 0.3743,
+        "individuals_affected": 0.3171,
+        "indiv_per_family": 0.0277,
+        "loc_hist_ffp_per_family": 0.0149
+      }
+    },
+    "heb": {
+      "train": {},
+      "test": {
+        "mae": 34.51,
+        "rmse": 44.37,
+        "r2": 0.889
+      },
+      "feature_importances": {
+        "location_enc": 0.0131,
+        "disaster_type_enc": 0.0113,
+        "disaster_severity": 0.0525,
+        "year": 0.0515,
+        "month": 0.1163,
+        "is_wet_season": 0.0156,
+        "families_affected": 0.3786,
+        "individuals_affected": 0.315,
+        "indiv_per_family": 0.0323,
+        "loc_hist_ffp_per_family": 0.0138
+      }
+    },
+    "rtef": {
+      "train": {},
+      "test": {
+        "mae": 30.29,
+        "rmse": 38.9,
+        "r2": 0.891
+      },
+      "feature_importances": {
+        "location_enc": 0.0146,
+        "disaster_type_enc": 0.0094,
+        "disaster_severity": 0.0505,
+        "year": 0.0545,
+        "month": 0.1221,
+        "is_wet_season": 0.015,
+        "families_affected": 0.3812,
+        "individuals_affected": 0.3088,
+        "indiv_per_family": 0.0304,
+        "loc_hist_ffp_per_family": 0.0135
+      }
+    },
+    "shelter_kits": {
+      "train": {},
+      "test": {
+        "mae": 44.08,
+        "rmse": 58.48,
+        "r2": 0.892
+      },
+      "feature_importances": {
+        "location_enc": 0.0122,
+        "disaster_type_enc": 0.0113,
+        "disaster_severity": 0.0519,
+        "year": 0.0541,
+        "month": 0.1168,
+        "is_wet_season": 0.0147,
+        "families_affected": 0.3775,
+        "individuals_affected": 0.315,
+        "indiv_per_family": 0.0322,
+        "loc_hist_ffp_per_family": 0.0142
+      }
+    },
+    "hygiene_kits": {
+      "train": {},
+      "test": {
+        "mae": 44.08,
+        "rmse": 58.48,
+        "r2": 0.892
+      },
+      "feature_importances": {
+        "location_enc": 0.0122,
+        "disaster_type_enc": 0.0113,
+        "disaster_severity": 0.0519,
+        "year": 0.0541,
+        "month": 0.1168,
+        "is_wet_season": 0.0147,
+        "families_affected": 0.3775,
+        "individuals_affected": 0.315,
+        "indiv_per_family": 0.0322,
+        "loc_hist_ffp_per_family": 0.0142
+      }
+    },
+    "sleeping_kits": {
+      "train": {},
+      "test": {
+        "mae": 44.08,
+        "rmse": 58.48,
+        "r2": 0.892
+      },
+      "feature_importances": {
+        "location_enc": 0.0122,
+        "disaster_type_enc": 0.0113,
+        "disaster_severity": 0.0519,
+        "year": 0.0541,
+        "month": 0.1168,
+        "is_wet_season": 0.0147,
+        "families_affected": 0.3775,
+        "individuals_affected": 0.315,
+        "indiv_per_family": 0.0322,
+        "loc_hist_ffp_per_family": 0.0142
+      }
+    },
+    "kitchen_kits": {
+      "train": {},
+      "test": {
+        "mae": 6.6,
+        "rmse": 7.91,
+        "r2": 0.891
+      },
+      "feature_importances": {
+        "location_enc": 0.0123,
+        "disaster_type_enc": 0.0102,
+        "disaster_severity": 0.0473,
+        "year": 0.0559,
+        "month": 0.1145,
+        "is_wet_season": 0.014,
+        "families_affected": 0.3909,
+        "individuals_affected": 0.3104,
+        "indiv_per_family": 0.0323,
+        "loc_hist_ffp_per_family": 0.0123
+      }
+    },
+    "family_kits": {
+      "train": {},
+      "test": {
+        "mae": 9.54,
+        "rmse": 11.77,
+        "r2": 0.888
+      },
+      "feature_importances": {
+        "location_enc": 0.0126,
+        "disaster_type_enc": 0.0078,
+        "disaster_severity": 0.051,
+        "year": 0.0565,
+        "month": 0.116,
+        "is_wet_season": 0.0153,
+        "families_affected": 0.3808,
+        "individuals_affected": 0.3152,
+        "indiv_per_family": 0.0309,
+        "loc_hist_ffp_per_family": 0.014
+      }
+    },
+    "portable_water": {
+      "train": {},
+      "test": {
+        "mae": 197.3,
+        "rmse": 253.16,
+        "r2": 0.879
+      },
+      "feature_importances": {
+        "location_enc": 0.0138,
+        "disaster_type_enc": 0.0105,
+        "disaster_severity": 0.0533,
+        "year": 0.0565,
+        "month": 0.1157,
+        "is_wet_season": 0.0161,
+        "families_affected": 0.3743,
+        "individuals_affected": 0.3171,
+        "indiv_per_family": 0.0277,
+        "loc_hist_ffp_per_family": 0.0149
+      }
+    }
+  }
+}

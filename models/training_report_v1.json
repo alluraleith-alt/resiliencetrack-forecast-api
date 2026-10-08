@@ -1,0 +1,162 @@
+{
+  "dataset": {
+    "total_rows": 119,
+    "train_rows": 115,
+    "test_rows": 4,
+    "date_range": {
+      "earliest": "2021-01-08",
+      "latest": "2026-02-08"
+    },
+    "train_events": 8,
+    "test_events": 1
+  },
+  "rf_params": {
+    "n_estimators": 200,
+    "max_depth": 6,
+    "min_samples_leaf": 2,
+    "min_samples_split": 4,
+    "max_features": "sqrt",
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "features": [
+    "location_enc",
+    "disaster_type_enc",
+    "disaster_severity",
+    "year",
+    "month",
+    "is_wet_season",
+    "families_affected",
+    "individuals_affected",
+    "indiv_per_family",
+    "loc_hist_ffp_per_family"
+  ],
+  "targets": [
+    "ffp_pack",
+    "hygiene_kits",
+    "sleeping_kits"
+  ],
+  "models": {
+    "ffp_pack": {
+      "train": {
+        "mae": 39.59,
+        "rmse": 78.6,
+        "r2": 0.851
+      },
+      "test": {
+        "mae": 45.3,
+        "rmse": 47.7,
+        "r2": -3.387
+      },
+      "overfit_flag": true,
+      "feature_importances": {
+        "location_enc": 0.037,
+        "disaster_type_enc": 0.0492,
+        "disaster_severity": 0.013,
+        "year": 0.0402,
+        "month": 0.135,
+        "is_wet_season": 0.0376,
+        "families_affected": 0.319,
+        "individuals_affected": 0.2848,
+        "indiv_per_family": 0.0362,
+        "loc_hist_ffp_per_family": 0.0479
+      }
+    },
+    "hygiene_kits": {
+      "train": {
+        "mae": 2.07,
+        "rmse": 9.69,
+        "r2": 0.551
+      },
+      "test": {
+        "mae": 1.03,
+        "rmse": 1.37,
+        "r2": 0.0
+      },
+      "overfit_flag": true,
+      "feature_importances": {
+        "location_enc": 0.0494,
+        "disaster_type_enc": 0.0607,
+        "disaster_severity": 0.0257,
+        "year": 0.0287,
+        "month": 0.1238,
+        "is_wet_season": 0.025,
+        "families_affected": 0.2698,
+        "individuals_affected": 0.2656,
+        "indiv_per_family": 0.108,
+        "loc_hist_ffp_per_family": 0.0433
+      }
+    },
+    "sleeping_kits": {
+      "train": {
+        "mae": 9.59,
+        "rmse": 38.64,
+        "r2": 0.763
+      },
+      "test": {
+        "mae": 33.03,
+        "rmse": 33.37,
+        "r2": 0.0
+      },
+      "overfit_flag": true,
+      "feature_importances": {
+        "location_enc": 0.0282,
+        "disaster_type_enc": 0.1009,
+        "disaster_severity": 0.009,
+        "year": 0.1203,
+        "month": 0.0416,
+        "is_wet_season": 0.0104,
+        "families_affected": 0.3543,
+        "individuals_affected": 0.2187,
+        "indiv_per_family": 0.0611,
+        "loc_hist_ffp_per_family": 0.0556
+      }
+    }
+  },
+  "example_predictions": [
+    {
+      "date": "2026-02-08",
+      "location": "PARAISO",
+      "disaster": "FLOOD/SHEARLINE",
+      "actual_ffp_pack": 40.0,
+      "predicted_ffp_pack": 80.3,
+      "actual_hygiene_kits": 0.0,
+      "predicted_hygiene_kits": 0.5,
+      "actual_sleeping_kits": 0.0,
+      "predicted_sleeping_kits": 38.8
+    },
+    {
+      "date": "2026-02-08",
+      "location": "BATO",
+      "disaster": "FLOOD/SHEARLINE",
+      "actual_ffp_pack": 0.0,
+      "predicted_ffp_pack": 63.3,
+      "actual_hygiene_kits": 0.0,
+      "predicted_hygiene_kits": 0.5,
+      "actual_sleeping_kits": 0.0,
+      "predicted_sleeping_kits": 35.2
+    },
+    {
+      "date": "2026-02-08",
+      "location": "PUEY",
+      "disaster": "FLOOD/SHEARLINE",
+      "actual_ffp_pack": 0.0,
+      "predicted_ffp_pack": 54.0,
+      "actual_hygiene_kits": 0.0,
+      "predicted_hygiene_kits": 2.6,
+      "actual_sleeping_kits": 0.0,
+      "predicted_sleeping_kits": 25.8
+    },
+    {
+      "date": "2026-02-08",
+      "location": "FABRICA",
+      "disaster": "FLOOD/SHEARLINE",
+      "actual_ffp_pack": 50.0,
+      "predicted_ffp_pack": 73.6,
+      "actual_hygiene_kits": 0.0,
+      "predicted_hygiene_kits": 0.5,
+      "actual_sleeping_kits": 0.0,
+      "predicted_sleeping_kits": 32.3
+    }
+  ]
+}
